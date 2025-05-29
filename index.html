@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Giant Arms - Make Your Presence HUGE!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap');
         
         body {
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Lato', sans-serif; /* Changed from 'Fredoka One' for better readability */
+            font-weight: 400; /* Default weight for Lato */
             line-height: 1.6;
             overflow-x: hidden;
+            color: #333; /* Setting a default dark gray for body text */
         }
 
         .container {
@@ -28,7 +31,7 @@
         /* Header */
         header {
             background: linear-gradient(135deg, #FFD700, #FFC947, #FFD700);
-            color: #8A2BE2;
+            color: #8A2BE2; /* This color is for the logo text primarily */
             padding: 1rem 0;
             position: fixed;
             width: 100%;
@@ -43,11 +46,14 @@
             align-items: center;
         }
 
+        /* Note: The primary logo text "Big Giant Arms" has inline styles in the HTML.
+           Its inline 'font-weight: 400;' will take precedence over the .logo 'font-weight: bold;'
+           for the "Big Giant Arms" text itself.
+        */
         .logo {
             font-size: 2rem;
-            font-weight: bold;
+            font-weight: bold; 
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
         }
 
         .nav-links {
@@ -57,9 +63,10 @@
         }
 
         .nav-links a {
+            font-family: 'Fredoka One', cursive; /* Keep Fredoka One for nav links */
             color: #8A2BE2;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: bold; /* Changed from 400 to bold */
             transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 25px;
@@ -73,7 +80,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #FFD700 0%, #FFC947 50%, #FFD700 100%);
-            color: #8A2BE2;
+            color: #8A2BE2; /* Default text color for this section */
             padding: 120px 0 80px;
             text-align: center;
             position: relative;
@@ -101,23 +108,19 @@
             text-shadow: 3px 3px 6px rgba(138, 43, 226, 0.3);
             animation: bounce 2s ease-in-out infinite alternate;
             color: #8A2BE2;
-            font-weight: 400;
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Changed from 400 to bold */
             font-style: italic;
             letter-spacing: -2px;
         }
 
-        @keyframes bounce {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-10px); }
-        }
-
-        .hero p {
+        .hero p { /* Will use Lato from body */
             font-size: 1.5rem;
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: #5c1c9a; /* Darker purple for readability on yellow, inherits Lato */
         }
 
         .cta-button {
@@ -128,13 +131,13 @@
             text-decoration: none;
             border-radius: 50px;
             font-size: 1.2rem;
-            font-weight: 400;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Changed from 400 to bold */
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
             text-transform: uppercase;
             letter-spacing: 1px;
             border: 3px solid #FFD700;
-            font-family: 'Fredoka One', cursive;
         }
 
         .cta-button:hover {
@@ -155,7 +158,8 @@
             margin-bottom: 3rem;
             color: #8A2BE2;
             text-shadow: 2px 2px 4px rgba(138, 43, 226, 0.2);
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Added bold */
             font-style: italic;
         }
 
@@ -181,6 +185,10 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             border-color: #8A2BE2;
         }
+        
+        .product-card p { /* Will use Lato from body */
+            margin-bottom: 1rem; 
+        }
 
         .product-icon {
             font-size: 4rem;
@@ -191,16 +199,17 @@
             font-size: 1.8rem;
             margin-bottom: 1rem;
             color: #8A2BE2;
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Added bold */
         }
 
         .price {
             font-size: 2rem;
             color: #8A2BE2;
-            font-weight: 400;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Changed from 400 to bold */
             margin: 1rem 0;
             text-shadow: 1px 1px 2px rgba(138, 43, 226, 0.2);
-            font-family: 'Fredoka One', cursive;
         }
 
         .order-button {
@@ -210,11 +219,11 @@
             border: 2px solid #FFD700;
             border-radius: 25px;
             font-size: 1rem;
-            font-weight: 400;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Changed from 400 to bold */
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: uppercase;
-            font-family: 'Fredoka One', cursive;
         }
 
         .order-button:hover {
@@ -244,13 +253,13 @@
             justify-content: center;
             color: #FFD700;
             font-size: 1.2rem;
-            font-weight: 400;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Changed from 400 to bold */
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
             overflow: hidden;
             border: 3px solid #FFD700;
-            font-family: 'Fredoka One', cursive;
         }
 
         .gallery-item::before {
@@ -277,13 +286,14 @@
         .bulk-orders {
             padding: 80px 0;
             background: #2c3e50;
-            color: white;
+            color: white; /* Child text elements will inherit this if not overridden */
         }
-
+        
+        /* Paragraphs in .bulk-orders will use Lato and inherit white color */
         .bulk-content {
             text-align: center;
         }
-
+        
         .bulk-table {
             max-width: 600px;
             margin: 2rem auto;
@@ -304,20 +314,22 @@
             text-align: center;
             border-bottom: 1px solid rgba(255,255,255,0.2);
         }
+        /* td will use Lato and inherit white color */
 
         .bulk-table th {
             background: rgba(138, 43, 226, 0.2);
-            font-weight: 400;
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Changed from 400 to bold */
         }
 
         /* Footer */
         footer {
             background: #1a1a1a;
-            color: white;
+            color: white; /* Child text elements will inherit this */
             padding: 3rem 0 1rem;
             text-align: center;
         }
+        /* Text in .footer-content divs like .contact-info will use Lato and inherit white color */
 
         .footer-content {
             display: grid;
@@ -329,7 +341,8 @@
         .footer-section h3 {
             margin-bottom: 1rem;
             color: #8A2BE2;
-            font-family: 'Fredoka One', cursive;
+            font-family: 'Fredoka One', cursive; /* Explicitly Fredoka One */
+            font-weight: bold; /* Added bold */
         }
 
         .contact-info {
@@ -339,18 +352,18 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                display: none; /* Consider a hamburger menu for mobile instead of just hiding */
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.5rem; /* Lato will be used here by default - ensure Fredoka One if needed */
             }
             
-            .hero p {
+            .hero p { /* Will use Lato */
                 font-size: 1.2rem;
             }
             
-            .section-title {
+            .section-title { /* Will use Lato by default - ensure Fredoka One if needed */
                 font-size: 2rem;
             }
         }
@@ -372,14 +385,12 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxkZWZzPgo8c3R5bGU+CkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PUZyZWRva2ErT25lOndnaHRANDAwJmRpc3BsYXk9c3dhcCcpOwouYmlnLXRleHQgeyBmb250LWZhbWlseTogJ0ZyZWRva2EgT25lJywgY3Vyc2l2ZTsgZm9udC13ZWlnaHQ6IDQwMDsgZm9udC1zaXplOiA0OHB4OyB9Ci5tZWRpdW0tdGV4dCB7IGZvbnQtZmFtaWx5OiAnRnJlZG9rYSBPbmUnLCBjdXJzaXZlOyBmb250LXdlaWdodDogNDAwOyBmb250LXNpemU6IDQ0cHg7IH0KPC9zdHlsZT4KPC9kZWZzPgo8IS0tIEJhY2tncm91bmQgLS0+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRjVGNURDIi8+Cgo8IS0tIExlZnQgQXJtIC0tPgo8cGF0aCBkPSJNMzAgMjAwQzIwIDE5MCAxMCAxODAgMjAgMTYwQzMwIDE0MCA1MCAxMzAgODAgODBDOTAgNzAgOTAgNTAgOTAgNDBDOTAgMzAgODAgMjAgOTAgMjBDOTUgMTUgMTAwIDE1IDEwNSAyMEMxMTAgMjUgMTA1IDM1IDEwMCA0MEMxMDAgNTAgOTAgNzAgODAgODBDNTIgMTI4IDM0IDEzNSAyNyAxNTVDOSAxNzYgMjEgMTg2IDMzIDE5NUM0NSAyMDQgNDAgMjIwIDMwIDIwMFoiIGZpbGw9IiNGRkM5NDciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSI0Ii8+Cgo8IS0tIFJpZ2h0IEFybSAtLT4KPHBhdGggZD0iTTM3MCAyMDBDMzgwIDE5MCAzOTAgMTgwIDM4MCAxNjBDMzcwIDE0MCAzNTAgMTMwIDMyMCA4MEMzMTAgNzAgMzEwIDUwIDMxMCA0MEMzMTAgMzAgMzIwIDIwIDMxMCAyMEMzMDUgMTUgMzAwIDE1IDI5NSAyMEMyOTAgMjUgMjk1IDM1IDMwMCA0MEMzMDAgNTAgMzEwIDcwIDMyMCA4MEMzNDggMTI4IDM2NiAxMzUgMzczIDE1NUMzOTEgMTc2IDM3OSAxODYgMzY3IDE5NUMzNTUgMjA0IDM2MCAyMjAgMzcwIDIwMFoiIGZpbGw9IiNGRkM5NDciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSI0Ii8+Cgo8IS0tIEJJRyBUZXh0IC0tPgo8dGV4dCB4PSIyMDAiIHk9IjE2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0ZGRDg0NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiIGNsYXNzPSJiaWctdGV4dCI+QklHPC90ZXh0Pgo8IS0tIEdJQU5UIFRleHQgLS0+Cjx0ZXh0IHg9IjIwMCIgeT0iMjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZEODQ3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyIgY2xhc3M9Im1lZGl1bS10ZXh0Ij5HSUFOVDwvdGV4dD4KPCEtLSBBUk1TIFRleHQgLS0+Cjx0ZXh0IHg9IjIwMCIgeT0iMjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjRkZEODQ3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyIgY2xhc3M9ImJpZy10ZXh0Ij5BUk1TPC90ZXh0Pgo8L3N2Zz4=" 
-                         alt="Big Giant Arms Logo" 
-                         style="height: 50px; width: auto;">
+                    <div style="font-size: 2.5rem;">💪</div>
+                    <div style="font-size: 2rem; font-weight: 400; color: #8A2BE2; text-shadow: 2px 2px 4px rgba(138, 43, 226, 0.3); letter-spacing: -1px; font-family: 'Fredoka One', cursive; font-style: italic;">Big Giant Arms</div>
                 </div>
             </div>
             <ul class="nav-links">
@@ -391,7 +402,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
             <h1 class="wiggle">MAKE YOUR PRESENCE HUGE!</h1>
@@ -400,7 +410,6 @@
         </div>
     </section>
 
-    <!-- Products Section -->
     <section class="products" id="products">
         <div class="container">
             <h2 class="section-title">Choose Your Giant Arms!</h2>
@@ -426,7 +435,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">See Giant Arms in Action!</h2>
@@ -443,9 +451,121 @@
         </div>
     </section>
 
-    <!-- Bulk Orders Section -->
     <section class="bulk-orders" id="bulk">
         <div class="container">
             <div class="bulk-content">
                 <h2 class="section-title">Bulk Pricing - Go BIG!</h2>
-                <p style="font-size: 1.3rem; margin-bottom: 2rem;">Perfect for teams, schools,
+                <p style="font-size: 1.3rem; margin-bottom: 2rem;">Perfect for teams, schools, corporate events, and large gatherings!</p>
+                
+                <div class="bulk-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Quantity</th>
+                                <th>Cardboard</th>
+                                <th>Foam Core</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10-24 arms</td>
+                                <td>$10.99 each</td>
+                                <td>$21.99 each</td>
+                            </tr>
+                            <tr>
+                                <td>25-49 arms</td>
+                                <td>$9.99 each</td>
+                                <td>$19.99 each</td>
+                            </tr>
+                            <tr>
+                                <td>50-99 arms</td>
+                                <td>$8.99 each</td>
+                                <td>$17.99 each</td>
+                            </tr>
+                            <tr>
+                                <td>100+ arms</td>
+                                <td>$7.99 each</td>
+                                <td>$15.99 each</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <a href="#contact" class="cta-button">Request Bulk Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Big Giant Arms</h3>
+                    <div class="contact-info">📧 orders@biggiantarms.com</div>
+                    <div class="contact-info">📞 1-800-BIG-ARMS</div>
+                    <div class="contact-info">🏢 123 Giant Way, Huge City, HC 12345</div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div>Custom Orders</div>
+                    <div>Shipping Info</div>
+                    <div>Return Policy</div>
+                    <div>FAQ</div>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Our Giant Fun!</h3>
+                    <div>📘 Facebook</div>
+                    <div>📷 Instagram</div>
+                    <div>🐦 Twitter</div>
+                    <div>📺 TikTok</div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #333; padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2025 Big Giant Arms. Making support HUGE since 2025! 💪</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { // Check if target exists
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add click handlers for order buttons
+        document.querySelectorAll('.order-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('🎉 Thanks for your interest! This would redirect to your order form or shopping cart.');
+            });
+        });
+
+        // Add click handlers for gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                alert('📸 This would open a full-size photo gallery showing ' + this.textContent + '!');
+            });
+        });
+
+        // Fun hover effect for the logo
+        const logoElement = document.querySelector('.logo');
+        if (logoElement) { // Check if logoElement exists
+            logoElement.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+
+            logoElement.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+        }
+    </script>
+</body>
+</html>
